@@ -27,7 +27,7 @@ Create a Virtual Environment and Activate It
    python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
-This application includes functionality to handle ** API keys directly within the app interface**. You can enter and save your API keys for services like SerpAPI and GroqAPI using the provided dashboard.
+This application includes functionality to handle  ** API keys directly within the app interface** . You can enter and save your API keys for services like SerpAPI and GroqAPI using the provided dashboard.
 
 Install the requirements
    ```bash
