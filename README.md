@@ -5,6 +5,8 @@
 - Extract valuable data using APIs like SerpAPI and Groq.
 - Seamlessly integrate and update Google Sheets with extracted data.
 - Perform operations such as CSV uploads and data updates with ease.
+
+  
 **  
 This application includes functionality to handle API keys directly within the app interface. You can enter and save your API keys for services like SerpAPI and GroqAPI using the provided dashboard.**
 ---
