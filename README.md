@@ -18,5 +18,5 @@ Ensure you have the following installed:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone [<repository_url>](https://github.com/phani69015/SheetQueryAI.git)
+   git clone https://github.com/phani69015/SheetQueryAI.git
    cd SheetQueryAI
