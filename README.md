@@ -20,3 +20,12 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/phani69015/SheetQueryAI.git
    cd SheetQueryAI
+2.Create a Virtual Environment and Activate It
+   For Linux/Windows/Mac:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+
+
+
+
