@@ -1,10 +1,14 @@
 # SheetQueryAI
 
 ## Project Description
-**SheetQueryAI** is a powerful dashboard application designed to enhance productivity by integrating search queries and Google Sheets. With this tool, users can:
+**SheetQueryAI** is a powerful dashboard application designed as a part of BreakouotAI assignment to enhance productivity by integrating search queries and Google Sheets. With this tool, users can:
 - Extract valuable data using APIs like SerpAPI and Groq.
-- Seamlessly integrate and update Google Sheets with extracted data.
+- Seamlessly integrate Google Sheets.
 - Perform operations such as CSV uploads and data updates with ease.
+  
+Additional Features:-
+- write back the extracted data directly to the Google Sheet.
+- Robust error-handling mechanisms for failed API calls or unsuccessful LLM queries, with user notifications.
 ---
 
 ## Setup Instructions
