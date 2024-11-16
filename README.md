@@ -6,8 +6,6 @@
 - Seamlessly integrate and update Google Sheets with extracted data.
 - Perform operations such as CSV uploads and data updates with ease.
 
-This project is ideal for anyone looking to automate data extraction, processing, and management workflows.
-
 ---
 
 ## Setup Instructions
@@ -20,5 +18,5 @@ Ensure you have the following installed:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
+   git clone [<repository_url>](https://github.com/phani69015/SheetQueryAI.git)
    cd SheetQueryAI
