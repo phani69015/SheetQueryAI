@@ -5,10 +5,6 @@
 - Extract valuable data using APIs like SerpAPI and Groq.
 - Seamlessly integrate and update Google Sheets with extracted data.
 - Perform operations such as CSV uploads and data updates with ease.
-
-  
-**  
-This application includes functionality to handle API keys directly within the app interface. You can enter and save your API keys for services like SerpAPI and GroqAPI using the provided dashboard.**
 ---
 
 ## Setup Instructions
@@ -31,5 +27,17 @@ Ensure you have the following installed:
    python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
+3.This application includes functionality to handle API keys directly within the app interface. You can enter and save your API keys for services like SerpAPI and GroqAPI using the provided dashboard.
 
+4.Install the requirements
+   ```bash
+   pip install -r req.txt
+   ```
+5.Run the application using streamlit
+  ```bash
+  streamlit run main.py
+  ```
 
+You can access the application at  Local URL: http://localhost:8501
+
+**Here is the Loom video for demonstration**
