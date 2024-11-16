@@ -28,37 +28,39 @@ def load_google_sheet(sheet_url):
         return None
 
 
+
     
 def add_data_to_google_sheet(sheet_url, new_data, column_name="New Data"):
-    try:
-        scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-        creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
-        client = gspread.authorize(creds)
+        try:
+            scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+            creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
+            client = gspread.authorize(creds)
         
-        sheet = client.open_by_url(sheet_url)
-        worksheet = sheet.get_worksheet(0)  
-        headers = worksheet.row_values(1)  
-        if column_name not in headers:
-            next_column = len(headers) + 1
-            worksheet.update_cell(1, next_column, column_name)
-            st.info(f"Added new column '{column_name}' at position {next_column}.")
-        else:
-            next_column = headers.index(column_name) + 1
-        
-        column_values = worksheet.col_values(next_column)
-        next_row = len(column_values) + 1
-
-        for i, data in enumerate(new_data):
-            if isinstance(data, dict) and "extracted_info" in data:
-                extracted_value = data["extracted_info"]  
-                worksheet.update_cell(next_row + i, next_column, extracted_value)
+            sheet = client.open_by_url(sheet_url)
+            worksheet = sheet.get_worksheet(0)  
+            headers = worksheet.row_values(1)  
+            if column_name not in headers:
+                next_column = len(headers) + 1
+                worksheet.update_cell(1, next_column, column_name)
+                st.info(f"Added new column '{column_name}' at position {next_column}.")
             else:
-                st.warning(f"Invalid data format at index {i}: {data}")
+                next_column = headers.index(column_name) + 1
+            
+            column_values = worksheet.col_values(next_column)
+            next_row = len(column_values) + 1
 
-        st.success("Data added to Google Sheet successfully.")
+            for i, data in enumerate(new_data):
+                if isinstance(data, dict) and "extracted_info" in data:
+                    extracted_value = data["extracted_info"]  
+                    worksheet.update_cell(next_row + i, next_column, extracted_value)
+                else:
+                    st.warning(f"Invalid data format at index {i}: {data}")
 
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
+            st.success("Data added to Google Sheet successfully.")
+
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
+    
 
 def add_data_to_csv(df1, new_data, column_name="Extracted Info", key_to_extract="extracted_info"):
     try:
