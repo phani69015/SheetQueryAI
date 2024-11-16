@@ -13,7 +13,6 @@ CREDENTIALS_FILE_PATH = "Utilizers/credentials.json"
 
 st.set_page_config(page_title="Data Extraction Dashboard", page_icon="📊", layout="wide")
 def main():
-    # Check if credentials are already in place (i.e., in .env and credentials.json)
     if not os.path.exists("Utilizers/.env") or not os.path.exists(CREDENTIALS_FILE_PATH):
         if not collect_credentials():
             st.stop() 

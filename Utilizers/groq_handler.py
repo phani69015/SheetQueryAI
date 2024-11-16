@@ -3,13 +3,10 @@ from groq import Groq
 from dotenv import load_dotenv
 
 
-# Load the .env file
 load_dotenv()
 
-# Retrieve the API key from environment variables
 GROQ_API_KEY = os.getenv("GROQAPI_KEY")
 
-# Debugging: Print the key to ensure it's loaded
 if GROQ_API_KEY:
     print("GROQ_API_KEY loaded successfully.")
 else:
