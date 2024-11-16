@@ -1,10 +1,22 @@
 import os
 from groq import Groq
-from Utilizers.config import GROQ_API_KEY
+from dotenv import load_dotenv
 
-client = Groq(api_key=GROQ_API_KEY)
+
+# Load the .env file
+load_dotenv()
+
+# Retrieve the API key from environment variables
+GROQ_API_KEY = os.getenv("GROQAPI_KEY")
+
+# Debugging: Print the key to ensure it's loaded
+if GROQ_API_KEY:
+    print("GROQ_API_KEY loaded successfully.")
+else:
+    print("GROQ_API_KEY is not set.")
 
 def extract_with_groq(prompt, search_results_text):
+    client = Groq(api_key=GROQ_API_KEY)
     messages = [
         {
             "role": "user",

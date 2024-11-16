@@ -15,7 +15,7 @@ def display_columns(df):
     return main_column
 def load_google_sheet(sheet_url):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name("Utilizers/credentials.json", scope)
     client = gspread.authorize(creds)
     try:
         sheet = client.open_by_url(sheet_url)
@@ -33,7 +33,7 @@ def load_google_sheet(sheet_url):
 def add_data_to_google_sheet(sheet_url, new_data, column_name="New Data"):
         try:
             scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-            creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
+            creds = ServiceAccountCredentials.from_json_keyfile_name("Utilizers/credentials.json", scope)
             client = gspread.authorize(creds)
         
             sheet = client.open_by_url(sheet_url)

@@ -1,6 +1,13 @@
 import os
 from serpapi import GoogleSearch
-from Utilizers.config import SERP_API_KEY
+from dotenv import load_dotenv
+
+
+# Load the .env file
+load_dotenv()
+
+# Retrieve the API key from environment variables
+SERP_API_KEY = os.getenv("SERPAPI_KEY")
 
 def search_entity_info(query):
     params = {

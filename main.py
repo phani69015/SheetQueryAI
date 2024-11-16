@@ -9,12 +9,12 @@ from Utilizers.display import display_extracted_data
 from Utilizers.creds import collect_credentials
 
 load_dotenv()
-CREDENTIALS_FILE_PATH = "credentials.json"
+CREDENTIALS_FILE_PATH = "Utilizers/credentials.json"
 
 st.set_page_config(page_title="Data Extraction Dashboard", page_icon="📊", layout="wide")
 def main():
     # Check if credentials are already in place (i.e., in .env and credentials.json)
-    if not os.path.exists(".env") or not os.path.exists(CREDENTIALS_FILE_PATH):
+    if not os.path.exists("Utilizers/.env") or not os.path.exists(CREDENTIALS_FILE_PATH):
         if not collect_credentials():
             st.stop() 
     st.title("Data Extraction Dashboard")

@@ -6,3 +6,5 @@ credentials.json
 __pycache__/
 *.pyc
 *.pyo
+.pyc
+.cpython.pyc
