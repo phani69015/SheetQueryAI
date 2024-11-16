@@ -16,24 +16,24 @@ Ensure you have the following installed:
 
 ### Installation
 
-1.Clone the repository:
+Clone the repository:
    ```bash
    git clone https://github.com/phani69015/SheetQueryAI.git
    cd SheetQueryAI
    ```
-2.Create a Virtual Environment and Activate It
+Create a Virtual Environment and Activate It
    For Linux/Windows/Mac:
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
-3.This application includes functionality to handle API keys directly within the app interface. You can enter and save your API keys for services like SerpAPI and GroqAPI using the provided dashboard.
+This application includes functionality to handle ** API keys directly within the app interface**. You can enter and save your API keys for services like SerpAPI and GroqAPI using the provided dashboard.
 
-4.Install the requirements
+Install the requirements
    ```bash
    pip install -r req.txt
    ```
-5.Run the application using streamlit
+Run the application using streamlit
   ```bash
   streamlit run main.py
   ```
