@@ -16,10 +16,12 @@ Ensure you have the following installed:
 2. **pip** (Python package manager)
 
 ### Installation
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/phani69015/SheetQueryAI.git
    cd SheetQueryAI
+   ```
 2.Create a Virtual Environment and Activate It
    For Linux/Windows/Mac:
    ```bash
